@@ -34,6 +34,7 @@ public class Main {
         book.add("Doe", "111");
         book.add("Smith", "202");
         book.add("Doe", "112");
+        book.add("Doe", "112");
         System.out.println("Doe: " + book.get("Doe"));
         System.out.println("Smith: " + book.get("Smith"));
         System.out.println("Фамилия, которой нет в справочнике: " + book.get("Иванов"));
