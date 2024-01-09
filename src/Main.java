@@ -35,8 +35,16 @@ public class Main {
         book.add("Smith", "202");
         book.add("Doe", "112");
         book.add("Doe", "112");
-        System.out.println("Doe: " + book.get("Doe"));
-        System.out.println("Smith: " + book.get("Smith"));
-        System.out.println("Фамилия, которой нет в справочнике: " + book.get("Иванов"));
+        if (book.get("Doe").isPresent()) {
+            System.out.println("Doe: " + book.get("Doe").get());
+        } else {
+            System.out.println("Doe not found");
+        }
+        if (book.get("Фамилия, которой нет в справочнике: ").isPresent()) {
+            System.out.println("Фамилия, которой нет в справочнике: " +
+                    book.get("Фамилия, которой нет в справочнике: ").get());
+        } else {
+            System.out.println("Нет такой фамилии");
+        }
     }
 }

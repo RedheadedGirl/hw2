@@ -15,8 +15,8 @@ public class PhoneBook {
         }
     }
 
-    public Set<String> get(String surname) {
-        return book.get(surname);
+    public Optional<Set<String>> get(String surname) {
+        return Optional.ofNullable(book.get(surname));
     }
 
 }
